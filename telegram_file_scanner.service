@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram File Scanner Bot
+After=network.target
+
+[Service]
+User=hasan
+WorkingDirectory=/home/hasan/telegram_file_scanner
+Environment="PATH=/home/hasan/telegram_file_scanner/venv/bin:/usr/bin:/bin"
+ExecStart=/home/hasan/telegram_file_scanner/venv/bin/python /home/hasan/telegram_file_scanner/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
