@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fileguard-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: "8435383061:AAF2YSzwEWctyFNuEpkag2EyoV7j45_1uFo"
+      - key: VT_API_KEY
+        value: "57fb476956653d4c29cd7d7e5d8b7f280753034e963ad808acb3c65c2992e8df"
